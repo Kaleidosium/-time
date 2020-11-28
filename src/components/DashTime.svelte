@@ -9,49 +9,59 @@
     faPlus,
     faTrash,
     faArrowsAlt,
+    faEye,
+    faEyeSlash
   } from "@fortawesome/free-solid-svg-icons";
 
-  const hours = getHours(new Date());
+  let clockOnly = false;
+  let manualDarkMode = false;
+  let hours = getHours(new Date());
 
-  const root = document.documentElement;
-  if (hours >= 18 || hours <= 6) {
-    root.style.setProperty("--bg-main", "#1C1E26");
-    root.style.setProperty("--text", "#FDF0ED");
-    root.style.setProperty("--primary", "#6C6F93");
-    root.style.setProperty("--secondary", "#E9436F");
-  }
+  const toggleTheme = () => {
+    manualDarkMode = !manualDarkMode;
+  };
 
-  let worldClockVisible = true;
-  const toggleWorldClockVisibility = () => {
-    worldClockVisible = !worldClockVisible;
+  const toggleWorldClock = () => {
+    clockOnly = !clockOnly;
   };
 
   let editButtonsVisible = false;
   const toggleEditButtonsVisibility = () => {
     editButtonsVisible = !editButtonsVisible;
   };
+
+  $: if (hours >= 18 || hours <= 6 || manualDarkMode) {
+    document.body.classList.toggle("dark-mode");
+  }
 </script>
 
-<div class="dashtime-app stack-large">
+<div class="dashtime-app">
   <div style="max-width: 640px">
     <!-- CurrentClientTime -->
     <div id="client-current-time">
-      <div
-        id="time-symbol"
-        title="Toggle World Clock Visibility"
-        on:click={toggleWorldClockVisibility}>
-        <!-- TODO(alt): Add logic for time symbols -->
-        <TimeSymbol />
+      <div class="header">
+        <span
+          id="time-symbol"
+          title="Toggle Light/Dark Mode"
+          on:click={toggleTheme}>
+          <TimeSymbol />
+        </span>
+        <span class="world-clock-toggle" on:click={toggleWorldClock}>
+          {#if !clockOnly}
+          <Fa icon={faEyeSlash} id="fa-plus-icon" color="--text" /> Hide World Clock
+          {:else}
+          <Fa icon={faEye} id="fa-plus-icon" color="--text" /> View World Clock
+          {/if}
+        </span>
       </div>
       <h1 id="current-time">
-        <!-- TODO(alt): Add time logic -->
         <CurrentTime />
       </h1>
     </div>
 
     <hr />
 
-    {#if worldClockVisible}
+    {#if !clockOnly}
       <!-- AddWorldClock -->
       <form>
         <input

@@ -3,7 +3,14 @@
   --bg-main: #fdf0ed;
   --text: #1a1c23;
   --primary: #f77d26;
-  --secondary: #E84A72;
+  --secondary: #e84a72;
+}
+
+.dark-mode {
+  --bg-main: #1c1e26;
+  --text: #fdf0ed;
+  --primary: #6c6f93;
+  --secondary: #6c6f93;
 }
 
 * {
@@ -75,13 +82,12 @@ form button {
   padding: 12px 17px;
   margin-left: 15px;
   border-radius: 5px;
-  background: #21BFC2;
+  background: #21bfc2;
   /* transition: background 0.3s ease-in-out; */
 }
 
 button {
-  color: var(--bg-main
-  );
+  color: var(--bg-main);
   font-size: 1rem;
   font-weight: bold;
   padding: 8px 12px;
@@ -107,15 +113,15 @@ button {
 }
 
 .btn__primary {
-  background-color:#27D796;
+  background-color: #27d796;
 }
 
 .btn__secondary {
-  background-color: #21BFC2;
+  background-color: #21bfc2;
 }
 
 .btn__danger {
-background-color: #F43E5C;
+  background-color: #f43e5c;
 }
 
 hr {
@@ -164,6 +170,16 @@ noscript {
   display: flex;
   justify-content: space-between;
   padding-bottom: 0.5rem;
+}
+
+.world-clock-toggle {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
 }
 
 #time-symbol {
