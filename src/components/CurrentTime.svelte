@@ -7,7 +7,7 @@
       new Date(),
       "MMMM do, u,",
     );
-    document.getElementById("time").innerHTML = format(new Date(), " pp");
+    document.getElementById("time").innerHTML = format(new Date(), "kk:mm:ss");
   }
 
   window.onload = tick;

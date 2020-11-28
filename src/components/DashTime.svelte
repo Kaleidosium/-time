@@ -10,12 +10,13 @@
     faTrash,
     faArrowsAlt,
     faEye,
-    faEyeSlash
+    faEyeSlash,
   } from "@fortawesome/free-solid-svg-icons";
 
   let clockOnly = false;
   let manualDarkMode = false;
-  let hours = getHours(new Date());
+  let date = new Date();
+  let hours = getHours(date);
 
   const toggleTheme = () => {
     manualDarkMode = !manualDarkMode;
@@ -48,9 +49,11 @@
         </span>
         <span class="world-clock-toggle" on:click={toggleWorldClock}>
           {#if !clockOnly}
-          <Fa icon={faEyeSlash} id="fa-plus-icon" color="--text" /> Hide World Clock
+            <Fa icon={faEyeSlash} id="fa-plus-icon" color="--text" />
+            Hide World Clock
           {:else}
-          <Fa icon={faEye} id="fa-plus-icon" color="--text" /> View World Clock
+            <Fa icon={faEye} id="fa-plus-icon" color="--text" />
+            View World Clock
           {/if}
         </span>
       </div>
@@ -109,7 +112,7 @@
                     <br />
                     <span class="hours-behind">6 Hours Behind</span>
                   </span>
-                  <span class="time">12:37:00 PM</span>
+                  <span class="time">12:37:00</span>
                 </label>
               </span>
               {#if editButtonsVisible}
