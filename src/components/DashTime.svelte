@@ -30,7 +30,7 @@
 </script>
 
 <div class="dashtime-app">
-  <div style="max-width: 640px">
+  <div class="container">
     <!-- CurrentClientTime -->
     <div id="client-current-time">
       <div class="header">
@@ -51,13 +51,16 @@
           type="text"
           id="datetime-0"
           autocomplete="off"
-          class="input input__lg"
-          placeholder="Add timezones" />
+          class="input input--lg"
+          placeholder="Add timezones" 
+          />
         <button
           type="submit"
           disabled=""
-          class="btn btn__lg"
-          aria-pressed="false">
+          class="btn--lg"
+          aria-pressed="false"
+          aria-label="Add a timezone"
+          >
           <Fa icon={faPlus} id="fa-plus-icon" size="1.5x" color="--bg-main" />
         </button>
       </form>
@@ -66,12 +69,12 @@
       <div class="btn-group misc-actions">
         <button
           type="button"
-          class="btn btn__primary"
+          class="btn--primary"
           aria-pressed="false"
           on:click={toggleEditButtonsVisibility}>Toggle edit mode</button>
         <button
           type="button"
-          class="btn btn__danger"
+          class="btn--danger"
           aria-pressed="false">Remove all</button>
       </div>
 

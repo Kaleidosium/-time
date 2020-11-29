@@ -34,10 +34,7 @@
   }
 </script>
 
-<ul
-  role="list"
-  class="datetime-list stack-large"
-  aria-labelledby="list-heading">
+<ul role="list" class="datetime-list stack-large">
   <!-- datetime-1 -->
   <li class="datetime">
     <div class="cards">
@@ -57,12 +54,12 @@
             <!-- TODO?(alt): Make this one of those :: things infront of the label instead -->
             <button
               type="button"
-              class="btn btn__secondary"
+              class="btn--secondary"
               aria-pressed="false">
               <Fa icon={faArrowsAlt} size="1.2x" />
               <!-- <span class="visually-hidden">Jakarta</span> -->
             </button>
-            <button type="button" class="btn btn__danger" aria-pressed="false">
+            <button type="button" class="btn--danger" aria-pressed="false">
               <Fa icon={faTrash} size="1.2x" />
               <!-- <span class="visually-hidden">Jakarta</span> -->
             </button>
