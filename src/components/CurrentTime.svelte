@@ -1,23 +1,22 @@
 <script>
+  import { onMount } from "svelte";
   import format from "date-fns/format";
 
   export let date;
 
-  function tick() {
-    document.getElementById("day").innerHTML = format(date, "cccc, ");
-    document.getElementById("date").innerHTML = format(
-      date,
-      "MMMM do, u,",
-    );
-    document.getElementById("time").innerHTML = format(date, "kk:mm:ss");
-  }
+  $: day = format(date, "cccc, ");
+  $: dateDate = format(date, "MMMM do, u,");
+  $: time = format(date, "kk:mm:ss");
 
-  window.onload = tick;
-  window.setInterval(tick, 60);
+  onMount(() => {
+    const interval = setInterval(() => {
+      date = new Date();
+    }, 1000);
+  });
 </script>
 
 <div class="local-time">
-  <div id="day" />
-  <div id="date" />
-  <div id="time" />
+  <div id="day">{day}</div>
+  <div id="date">{dateDate}</div>
+  <div id="time">{time}</div>
 </div>
