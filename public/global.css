@@ -58,7 +58,7 @@ body {
 /*--- SECTION #1 ---*/
 
 form {
-  padding-top: 1.5rem;
+  padding-top: 2rem;
   position: relative;
   display: flex;
   align-items: center;
@@ -102,14 +102,14 @@ button {
 }
 
 .cards {
-  padding-top: 2.5rem;
+  padding-top: 1.5rem;
   display: grid;
   grid-gap: 1rem;
 }
 
 .card {
   border-bottom: 5px solid var(--primary);
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.3rem;
 }
 
 .btn__primary {
@@ -154,9 +154,10 @@ noscript {
   padding: 5px 0;
 }
 
-.time {
-  font-size: 3rem;
+.world-time {
+  font-size: 3.6rem;
   font-weight: 700;
+  margin-top: -0.4rem;
 }
 .location {
   font-size: 2rem;
@@ -169,7 +170,7 @@ noscript {
 .datetime-label {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.3rem;
 }
 
 .world-clock-toggle {

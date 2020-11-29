@@ -1,13 +1,15 @@
 <script>
   import format from "date-fns/format";
 
+  export let date;
+
   function tick() {
-    document.getElementById("day").innerHTML = format(new Date(), "cccc, ");
+    document.getElementById("day").innerHTML = format(date, "cccc, ");
     document.getElementById("date").innerHTML = format(
-      new Date(),
+      date,
       "MMMM do, u,",
     );
-    document.getElementById("time").innerHTML = format(new Date(), "kk:mm:ss");
+    document.getElementById("time").innerHTML = format(date, "kk:mm:ss");
   }
 
   window.onload = tick;

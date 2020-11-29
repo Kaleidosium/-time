@@ -3,14 +3,13 @@
 
   import CurrentTime from "./CurrentTime.svelte";
   import TimeSymbol from "./TimeSymbol.svelte";
+  import WorldClockToggle from "./WorldClockToggle.svelte";
 
   import Fa from "svelte-fa";
   import {
     faPlus,
     faTrash,
     faArrowsAlt,
-    faEye,
-    faEyeSlash,
   } from "@fortawesome/free-solid-svg-icons";
 
   let clockOnly = false;
@@ -18,22 +17,10 @@
   let date = new Date();
   let hours = getHours(date);
 
-  const toggleTheme = () => {
-    manualDarkMode = !manualDarkMode;
-  };
-
-  const toggleWorldClock = () => {
-    clockOnly = !clockOnly;
-  };
-
   let editButtonsVisible = false;
   const toggleEditButtonsVisibility = () => {
     editButtonsVisible = !editButtonsVisible;
   };
-
-  $: if (hours >= 18 || hours <= 6 || manualDarkMode) {
-    document.body.classList.toggle("dark-mode");
-  }
 </script>
 
 <div class="dashtime-app">
@@ -41,24 +28,11 @@
     <!-- CurrentClientTime -->
     <div id="client-current-time">
       <div class="header">
-        <span
-          id="time-symbol"
-          title="Toggle Light/Dark Mode"
-          on:click={toggleTheme}>
-          <TimeSymbol />
-        </span>
-        <span class="world-clock-toggle" on:click={toggleWorldClock}>
-          {#if !clockOnly}
-            <Fa icon={faEyeSlash} id="fa-plus-icon" color="--text" />
-            Hide World Clock
-          {:else}
-            <Fa icon={faEye} id="fa-plus-icon" color="--text" />
-            View World Clock
-          {/if}
-        </span>
+        <TimeSymbol bind:manualDarkMode bind:hours />
+        <WorldClockToggle bind:clockOnly />
       </div>
       <h1 id="current-time">
-        <CurrentTime />
+        <CurrentTime bind:date/>
       </h1>
     </div>
 
@@ -112,7 +86,7 @@
                     <br />
                     <span class="hours-behind">6 Hours Behind</span>
                   </span>
-                  <span class="time">12:37:00</span>
+                  <span class="world-time">12:37:00</span>
                 </label>
               </span>
               {#if editButtonsVisible}
