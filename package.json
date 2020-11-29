@@ -1,6 +1,11 @@
 {
   "name": "-time",
   "version": "1.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IamRifki/-time.git"
+  },
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
@@ -24,6 +29,7 @@
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "date-fns": "^2.16.1",
+    "date-fns-tz": "^1.0.12",
     "sirv-cli": "^1.0.0"
   }
 }

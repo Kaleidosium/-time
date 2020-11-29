@@ -3,14 +3,18 @@
   --bg-main: #fdf0ed;
   --text: #1a1c23;
   --primary: #f77d26;
-  --secondary: #e84a72;
+  --blue: #1eaeae;
+  --green: #07da8c;
+  --red: #f43e5c;
 }
 
 .dark-mode {
   --bg-main: #1c1e26;
   --text: #fdf0ed;
   --primary: #6c6f93;
-  --secondary: #6c6f93;
+  --blue: #21bfc2;
+  --green: #27d796;
+  --red: #f43e5c;
 }
 
 * {
@@ -82,7 +86,7 @@ form button {
   padding: 12px 17px;
   margin-left: 15px;
   border-radius: 5px;
-  background: #21bfc2;
+  background: var(--blue);
   /* transition: background 0.3s ease-in-out; */
 }
 
@@ -93,7 +97,6 @@ button {
   padding: 8px 12px;
   margin-left: 15px;
   border-radius: 5px;
-  background: var(--secondary);
   /* transition: background 0.3s ease-in-out; */
 }
 
@@ -113,15 +116,15 @@ button {
 }
 
 .btn__primary {
-  background-color: #27d796;
+  background-color: var(--green);
 }
 
 .btn__secondary {
-  background-color: #21bfc2;
+  background-color: var(--blue);
 }
 
 .btn__danger {
-  background-color: #f43e5c;
+  background-color: var(--red);
 }
 
 hr {
