@@ -9,7 +9,7 @@
   let displayedTimeDiff;
 
   const timeZone = "America/Argentina/Buenos_Aires";
-  const pattern = "kk:mm:ss";
+  const pattern = "HH:mm:ss";
   // Get the last name of the full TZ name
   // and replace the underscore with a space
   const formattedTimeZone = timeZone

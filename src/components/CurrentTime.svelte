@@ -5,7 +5,7 @@
 
   $: day = format(date, "cccc, ");
   $: dateDate = format(date, "MMMM do, u,");
-  $: time = format(date, "kk:mm:ss");
+  $: time = format(date, "HH:mm:ss");
 </script>
 
 <div class="local-time">
