@@ -57,7 +57,7 @@
         <button
           type="submit"
           disabled=""
-          class="btn--lg"
+          class="btn--lg btn--secondary"
           aria-pressed="false"
           aria-label="Add a timezone"
           >
