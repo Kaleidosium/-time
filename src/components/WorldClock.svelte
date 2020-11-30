@@ -19,11 +19,7 @@
   const pattern = "HH:mm:ss";
   // Get the last name of the full TZ name
   // and replace the underscore with a space
-  $: formattedTimeZone = timeZone
-    .split("/")
-    .slice(-1)
-    .pop()
-    .replace(/_/g, " ");
+  $: formattedTimeZone = timeZone.split("/").slice(-1).pop().replace(/_/g, " ");
 
   $: zonedDate = utcToZonedTime(date, timeZone);
   $: output = format(zonedDate, pattern, { timeZone: timeZone });
@@ -45,13 +41,12 @@
   <!-- datetime-1 -->
   <li class="datetime">
     <div class="cards">
-      <div class="card">
-        {#each timeZones as timeZone, index (timeZones.id)}
+      {#each timeZones as timeZone, index (timeZones.id)}
+        <div class="card">
           <span class="time-elsewhere label-wrapper">
             <label for="datetime-1" class="datetime-label">
               <span>
-                <span
-                  class="location">{timeZone.timeZone}</span>
+                <span class="location">{timeZone.timeZone}</span>
                 <br />
                 <span class="hours-behind">{displayedTimeDiff}</span>
               </span>
@@ -71,8 +66,8 @@
               </button>
             </span>
           {/if}
-        {/each}
-      </div>
+        </div>
+      {/each}
     </div>
   </li>
 </ul>
