@@ -1,5 +1,5 @@
 # -time
--time (or dashtime) is a time dashboard that features a world clock, and dark mode.
+-time (or dashtime) is a Time Dashboard written using the Svelte JavaScript framework.
 
 I made this as an excuse to learn Svelte.
 
