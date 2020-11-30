@@ -1,5 +1,5 @@
 <script>
-  import { onMount } from 'svelte';
+  import { onMount } from "svelte";
   import getHours from "date-fns/getHours";
 
   import CurrentTime from "./CurrentTime.svelte";
@@ -8,9 +8,7 @@
   import WorldClock from "./WorldClock.svelte";
 
   import Fa from "svelte-fa";
-  import {
-    faPlus,
-  } from "@fortawesome/free-solid-svg-icons";
+  import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
   let clockOnly = false;
   let manualDarkMode = false;
@@ -52,15 +50,13 @@
           id="datetime-0"
           autocomplete="off"
           class="input input--lg"
-          placeholder="Add timezones" 
-          />
+          placeholder="Add timezones" />
         <button
           type="submit"
           disabled=""
           class="btn--lg btn--secondary"
           aria-pressed="false"
-          aria-label="Add a timezone"
-          >
+          aria-label="Add a timezone">
           <Fa icon={faPlus} id="fa-plus-icon" size="1.5x" color="--bg-main" />
         </button>
       </form>
@@ -72,14 +68,23 @@
           class="btn--primary"
           aria-pressed="false"
           on:click={toggleEditButtonsVisibility}>Toggle edit mode</button>
-        <button
-          type="button"
-          class="btn--danger"
-          aria-pressed="false">Remove all</button>
+        <button type="button" class="btn--danger" aria-pressed="false">Remove
+          all</button>
       </div>
 
       <!-- WorldClockList -->
       <WorldClock bind:date bind:editButtonsVisible />
+      <hr style="margin-bottom: 0.5rem; margin-top: 2rem;" />
     {/if}
+    <footer>
+      <div class="footer-text">
+        Colour palette is based on the
+        <a href="https://horizontheme.netlify.app/">Horizon theme</a>.
+      </div>
+      <div class="footer-text">
+        By
+        <a href="iamrifki.github.io">Dania Rifki</a>.
+      </div>
+    </footer>
   </div>
 </div>

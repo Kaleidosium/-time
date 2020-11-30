@@ -50,6 +50,11 @@ body {
   max-width: 640px;
 }
 
+a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
 form {
   padding-top: 2rem;
   position: relative;
@@ -117,9 +122,19 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 8px solid var(--primary);
+  border-top: 10px solid var(--primary);
   margin: 1em 0;
   padding: 0;
+}
+
+footer {
+  display: block;
+  height: 1px;
+  border: 0;  
+  padding: 0;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
 }
 
 noscript {
