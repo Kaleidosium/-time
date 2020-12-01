@@ -30,7 +30,7 @@
     "dot-location": ["error", "property"],
     "indent": [
       "error",
-      4,
+      2,
       {
         "SwitchCase": 1
       }

@@ -12,10 +12,10 @@
 
 <span class="world-clock-toggle" on:click={toggleWorldClock}>
   {#if !clockOnly}
-    <Fa icon={faEyeSlash} id="fa-plus-icon" color="--text" />
+    <Fa icon={faEyeSlash} id="fa-eye-slash-icon" color="--text" />
     Hide World Clock
   {:else}
-    <Fa icon={faEye} id="fa-plus-icon" color="--text" />
+    <Fa icon={faEye} id="fa-eye-icon" color="--text" />
     View World Clock
   {/if}
 </span>

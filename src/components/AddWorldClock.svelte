@@ -8,7 +8,7 @@
   const dispatch = createEventDispatcher();
 </script>
 
-<form on:submit|preventDefault={dispatch("submitTimeZone", newTimeZone)}>
+<form on:submit|preventDefault={dispatch('submitTimeZone', newTimeZone)}>
   <input
     type="text"
     id="datetime-0"

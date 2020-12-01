@@ -14,9 +14,9 @@
   let date = new Date();
   let hours = getHours(date);
   let editButtonsVisible = false;
+  let timeZones = [];
   let newTimeZone = "";
   let newTimeZoneID;
-  let timeZones = [];
 
   $: totalTimeZones = timeZones.length;
   $: {
