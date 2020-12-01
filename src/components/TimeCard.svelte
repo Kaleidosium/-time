@@ -9,7 +9,7 @@
   const pattern = "HH:mm";
   // Get the last name of the full TZ name
   // and replace the underscore with a space
-  const formattedTimeZone = timeZone
+  let formattedTimeZone = timeZone
     .split("/")
     .slice(-1)
     .pop()

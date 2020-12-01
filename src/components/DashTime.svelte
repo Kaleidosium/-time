@@ -6,19 +6,31 @@
   import TimeSymbol from "./TimeSymbol.svelte";
   import WorldClockToggle from "./WorldClockToggle.svelte";
   import WorldClock from "./WorldClock.svelte";
-
-  import Fa from "svelte-fa";
-  import { faPlus } from "@fortawesome/free-solid-svg-icons";
+  import MiscActions from "./MiscActions.svelte";
+  import AddWorldClock from "./AddWorldClock.svelte"
 
   let clockOnly = false;
   let manualDarkMode = false;
   let date = new Date();
   let hours = getHours(date);
-
   let editButtonsVisible = false;
-  const toggleEditButtonsVisibility = () => {
-    editButtonsVisible = !editButtonsVisible;
-  };
+  let newTimeZone = "";
+  let newTimeZoneID;
+  let timeZones = [];
+
+  $: totalTimeZones = timeZones.length;
+  $: {
+    if (totalTimeZones === 0) {
+      newTimeZoneID = 1;
+    } else {
+      newTimeZoneID = Math.max(...timeZones.map(t => t.id)) + 1;
+    }
+  }
+
+  function addTimeZone() {
+    timeZones = [...timeZones, { id: newTimeZoneID, timeZone: newTimeZone }];
+    newTimeZone = "";
+  }
 
   onMount(() => {
     const interval = setInterval(() => {
@@ -43,37 +55,12 @@
     <hr />
 
     {#if !clockOnly}
-      <!-- AddWorldClock -->
-      <form>
-        <input
-          type="text"
-          id="datetime-0"
-          autocomplete="off"
-          class="input input--lg"
-          placeholder="Add timezones" />
-        <button
-          type="submit"
-          disabled=""
-          class="btn--lg btn--secondary"
-          aria-pressed="false"
-          aria-label="Add a timezone">
-          <Fa icon={faPlus} id="fa-plus-icon" size="1.5x" color="--bg-main" />
-        </button>
-      </form>
+      <AddWorldClock bind:newTimeZone on:submitTimeZone={addTimeZone} />
+       
+      <MiscActions bind:editButtonsVisible bind:timeZones />
 
-      <!-- MiscActions -->
-      <div class="btn-group misc-actions">
-        <button
-          type="button"
-          class="btn--primary"
-          aria-pressed="false"
-          on:click={toggleEditButtonsVisibility}>Toggle edit mode</button>
-        <button type="button" class="btn--danger" aria-pressed="false">Remove
-          all</button>
-      </div>
+      <WorldClock bind:date bind:editButtonsVisible bind:timeZones />
 
-      <!-- WorldClockList -->
-      <WorldClock bind:date bind:editButtonsVisible />
       <hr style="margin-bottom: 0.5rem; margin-top: 2rem;" />
     {/if}
     <footer>

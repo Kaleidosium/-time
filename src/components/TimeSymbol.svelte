@@ -16,10 +16,10 @@
   }
 </script>
 
-<span id="time-symbol" title="Toggle Light/Dark Mode" on:click={toggleTheme}>
+<button id="time-symbol" title="Toggle Light/Dark Mode" on:click={toggleTheme} aria-pressed="false">
   {#if hours > 17 || hours < 6}
     <Fa icon={faMoon} id="fa-moon-icon" size="2x" color="#FDF0ED" />
   {:else}
     <Fa icon={faSun} id="fa-sun-icon" size="2x" color="#FDF0ED" />
   {/if}
-</span>
+</button>

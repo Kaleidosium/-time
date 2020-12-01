@@ -3,14 +3,10 @@
   import { faTrash, faArrowsAlt } from "@fortawesome/free-solid-svg-icons";
 
   import TimeCard from "./TimeCard.svelte";
+  
   export let date;
   export let editButtonsVisible;
-
-  let timeZones = [
-    { id: 1, timeZone: "America/Argentina/Buenos_Aires" },
-    { id: 2, timeZone: "Europe/Oslo" },
-    { id: 3, timeZone: "Australia/Sydney" },
-  ];
+  export let timeZones;
 
   function removeTimeZone(timeZone) {
     timeZones = timeZones.filter(tz => tz.id !== timeZone.id);
@@ -29,11 +25,11 @@
             <!-- TODO?(alt): Make this one of those :: things infront of the label instead -->
             <button type="button" class="btn--secondary" aria-pressed="false">
               <Fa icon={faArrowsAlt} size="1.2x" />
-              <!-- <span class="visually-hidden">Jakarta</span> -->
+              <span class="visually-hidden">Move {timeZone.timeZone}</span>
             </button>
             <button type="button" class="btn--danger" on:click={() => removeTimeZone(timeZone)} aria-pressed="false">
               <Fa icon={faTrash} size="1.2x" />
-              <!-- <span class="visually-hidden">Jakarta</span> -->
+              <span class="visually-hidden">Delete {timeZone.timeZone}</span>
             </button>
           </span>
         {/if}
