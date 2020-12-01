@@ -181,6 +181,10 @@ noscript {
   justify-content: space-between;
 }
 
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
 .visually-hidden {
   position: absolute !important;
   height: 1px;
