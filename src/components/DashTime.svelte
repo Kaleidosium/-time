@@ -6,14 +6,12 @@
   import TimeSymbol from "./TimeSymbol.svelte";
   import WorldClockToggle from "./WorldClockToggle.svelte";
   import WorldClock from "./WorldClock.svelte";
-  import MiscActions from "./MiscActions.svelte";
-  import AddWorldClock from "./AddWorldClock.svelte"
+  import AddWorldClock from "./AddWorldClock.svelte";
 
   let clockOnly = false;
   let manualDarkMode = false;
   let date = new Date();
   let hours = getHours(date);
-  let editButtonsVisible = false;
   let timeZones = [];
   let newTimeZone = "";
   let newTimeZoneID;
@@ -30,6 +28,10 @@
   function addTimeZone() {
     timeZones = [...timeZones, { id: newTimeZoneID, timeZone: newTimeZone }];
     newTimeZone = "";
+  }
+
+  function removeAllTimeZones() {
+    timeZones.splice(0, timeZones.length);
   }
 
   onMount(() => {
@@ -56,10 +58,16 @@
 
     {#if !clockOnly}
       <AddWorldClock bind:newTimeZone on:submitTimeZone={addTimeZone} />
-       
-      <MiscActions bind:editButtonsVisible bind:timeZones />
 
-      <WorldClock bind:date bind:editButtonsVisible bind:timeZones />
+      <div class="btn-group remove-all">
+        <button
+          type="button"
+          class="btn--danger"
+          aria-pressed="false"
+          on:click={removeAllTimeZones}>Remove all</button>
+      </div>
+
+      <WorldClock bind:date bind:timeZones />
 
       <hr style="margin-bottom: 0.5rem; margin-top: 2rem;" />
     {/if}

@@ -1,9 +1,7 @@
 <script>
   import Fa from "svelte-fa";
   import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
-
-  // TODO(alt): Store manualDarkMode to LocalStorage
-  // https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API
+  
   export let hours;
   export let manualDarkMode;
 

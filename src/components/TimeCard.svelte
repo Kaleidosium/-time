@@ -29,13 +29,15 @@
   }
 </script>
 
-<span class="time-elsewhere label-wrapper">
-  <label for="datetime-1" class="datetime-label">
-    <span>
-      <span class="location">{formattedTimeZone}</span>
-      <br />
-      <span class="hours-behind">{displayedTimeDiff}</span>
-    </span>
-    <span class="world-time">{output}</span>
-  </label>
-</span>
+<div class="card">
+  <span class="time-elsewhere label-wrapper">
+    <label for="datetime-1" class="datetime-label">
+      <span>
+        <span class="location">{formattedTimeZone}</span>
+        <br />
+        <span class="hours-behind">{displayedTimeDiff}</span>
+      </span>
+      <span class="world-time">{output}</span>
+    </label>
+  </span>
+</div>
