@@ -1,11 +1,8 @@
 <script>
   import differenceInHours from "date-fns/differenceInHours";
   import { utcToZonedTime, format } from "date-fns-tz";
-  import Fa from "svelte-fa";
-  import { faTrash, faArrowsAlt } from "@fortawesome/free-solid-svg-icons";
 
   export let date;
-  export let editButtonsVisible;
   export let timeZone;
   let displayedTimeDiff;
 
@@ -32,28 +29,13 @@
   }
 </script>
 
-<div class="card">
-  <span class="time-elsewhere label-wrapper">
-    <label for="datetime-1" class="datetime-label">
-      <span>
-        <span class="location">{formattedTimeZone}</span>
-        <br />
-        <span class="hours-behind">{displayedTimeDiff}</span>
-      </span>
-      <span class="world-time">{output}</span>
-    </label>
-  </span>
-  {#if editButtonsVisible}
-    <span class="btn-group">
-      <!-- TODO?(alt): Make this one of those :: things infront of the label instead -->
-      <button type="button" class="btn--secondary" aria-pressed="false">
-        <Fa icon={faArrowsAlt} size="1.2x" />
-        <!-- <span class="visually-hidden">Jakarta</span> -->
-      </button>
-      <button type="button" class="btn--danger" aria-pressed="false">
-        <Fa icon={faTrash} size="1.2x" />
-        <!-- <span class="visually-hidden">Jakarta</span> -->
-      </button>
+<span class="time-elsewhere label-wrapper">
+  <label for="datetime-1" class="datetime-label">
+    <span>
+      <span class="location">{formattedTimeZone}</span>
+      <br />
+      <span class="hours-behind">{displayedTimeDiff}</span>
     </span>
-  {/if}
-</div>
+    <span class="world-time">{output}</span>
+  </label>
+</span>

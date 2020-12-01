@@ -87,7 +87,7 @@ button {
   font-size: 1rem;
   font-weight: bold;
   padding: 8px 12px;
-  margin-left: 15px;
+  margin-right: 1px !important;
   border-radius: 5px;
 }
 
@@ -168,7 +168,7 @@ noscript {
 .datetime-label {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 0.3rem;
+  padding-bottom: 0.5rem;
 }
 
 .world-clock-toggle {

@@ -11,11 +11,7 @@
       "processor": "svelte3/svelte3"
     }
   ],
-  "parser": "babel-eslint",
   "parserOptions": {
-    "ecmaFeatures": {
-      "modules": true
-    },
     "ecmaVersion": 2019,
     "sourceType": "module"
   },

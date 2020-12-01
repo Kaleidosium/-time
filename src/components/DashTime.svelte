@@ -79,11 +79,11 @@
     <footer>
       <div class="footer-text">
         Colour palette is based on the
-        <a href="https://horizontheme.netlify.app/">Horizon theme</a>.
+        <a href="https://horizontheme.netlify.app/">Horizon theme</a>
       </div>
       <div class="footer-text">
         By
-        <a href="iamrifki.github.io">Dania Rifki</a>.
+        <a href="iamrifki.github.io">Dania Rifki</a>
       </div>
     </footer>
   </div>
