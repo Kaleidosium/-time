@@ -13,11 +13,12 @@
 <form on:submit|preventDefault={dispatch('submitTimeZone', newTimeZone)}>
   <input
     type="text"
-    id="datetime-0"
+    id="datetime-input"
     list="timeZoneList"
     class="input input--lg"
     placeholder="Add timezones"
     bind:value={newTimeZone} />
+  <label for="datetime-input" aria-label="Add timezones" />
   <datalist id="timeZoneList">
     {#each timeZoneData as listedTimeZone}
       <option value={listedTimeZone} />

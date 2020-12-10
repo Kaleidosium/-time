@@ -10,7 +10,7 @@
 .dark-mode {
   --bg-main: #1c1e26;
   --text: #fdf0ed;
-  --primary: #6c6f93;
+  --primary: #979ace;
   --blue: #21bfc2;
   --green: #27d796;
   --red: #f43e5c;
@@ -53,6 +53,7 @@ body {
 a {
   text-decoration: none;
   color: var(--primary);
+  font-size: large;
 }
 
 form {
@@ -130,7 +131,7 @@ hr {
 footer {
   display: block;
   height: 1px;
-  border: 0;  
+  border: 0;
   padding: 0;
   font-weight: 500;
   display: flex;

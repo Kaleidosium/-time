@@ -30,7 +30,7 @@
 </script>
 
 <div class="card">
-  <span class="time-elsewhere label-wrapper">
+  <time class="time-elsewhere label-wrapper">
     <label for="datetime-cards" class="datetime-label">
       <span>
         <span class="location">{formattedTimeZone}</span>
@@ -39,5 +39,5 @@
       </span>
       <span class="world-time">{output}</span>
     </label>
-  </span>
+  </time>
 </div>

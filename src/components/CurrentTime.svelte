@@ -8,8 +8,8 @@
   $: time = format(date, "HH:mm:ss");
 </script>
 
-<div class="local-time">
+<time class="local-time">
   <div id="day">{day}</div>
   <div id="date">{dateDate}</div>
   <div id="time">{time}</div>
-</div>
+</time>
