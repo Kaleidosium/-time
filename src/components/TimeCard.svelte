@@ -31,7 +31,7 @@
 
 <div class="card">
   <span class="time-elsewhere label-wrapper">
-    <label for="datetime-1" class="datetime-label">
+    <label for="datetime-cards" class="datetime-label">
       <span>
         <span class="location">{formattedTimeZone}</span>
         <br />
