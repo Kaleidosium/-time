@@ -10,7 +10,7 @@
 
   let clockOnly = false;
   let manualDarkMode = false;
-  let date = new Date(2018, 11, 24, 10);
+  let date = new Date();
   let hours = getHours(date);
   let timeZones = [];
   let newTimeZone = "";
