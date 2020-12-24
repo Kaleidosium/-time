@@ -77,7 +77,7 @@
       </div>
       <div class="footer-text">
         By
-        <a href="iamrifki.github.io">Dania Rifki</a>
+        <a href="https://iamrifki.github.io">Dania Rifki</a>
       </div>
     </footer>
   </div>
