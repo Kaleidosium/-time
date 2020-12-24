@@ -14,7 +14,6 @@
   let newTimeZone = "";
   let newTimeZoneID;
   let clockOnly = false;
-  let manualDarkMode = (hours > 17 || hours < 6) ? true : false;
 
   $: totalTimeZones = timeZones.length;
   $: {
@@ -46,7 +45,7 @@
     <!-- CurrentClientTime -->
     <div id="client-current-time">
       <div class="header">
-        <TimeSymbol bind:manualDarkMode bind:hours />
+        <TimeSymbol bind:hours />
         <WorldClockToggle bind:clockOnly />
       </div>
       <h1 id="current-time">

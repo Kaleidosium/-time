@@ -3,13 +3,12 @@
   import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
   
   export let hours;
-  export let manualDarkMode;
 
   const toggleTheme = () => {
-    manualDarkMode = !manualDarkMode;
+    document.body.classList.toggle("dark-mode");
   };
 
-  $: if (hours > 17 || hours < 6 && manualDarkMode) {
+  $: if (hours > 17 || hours < 6) {
     document.body.classList.toggle("dark-mode");
   }
 </script>
