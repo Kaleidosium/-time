@@ -9,7 +9,7 @@
     manualDarkMode = !manualDarkMode;
   };
 
-  $: if (hours > 17 || hours < 6 || manualDarkMode) {
+  $: if (hours > 17 || hours < 6 && manualDarkMode) {
     document.body.classList.toggle("dark-mode");
   }
 </script>

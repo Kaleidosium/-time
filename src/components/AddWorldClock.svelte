@@ -18,7 +18,9 @@
     class="input input--lg"
     placeholder="Add timezones"
     autocomplete="off"
-    bind:value={newTimeZone} />
+    bind:value={newTimeZone} 
+    required
+    />
   <label for="datetime-input" aria-label="Add timezones" />
   <datalist id="timeZoneList">
     {#each timeZoneData as listedTimeZone}
