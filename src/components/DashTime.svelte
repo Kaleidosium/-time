@@ -8,13 +8,13 @@
   import WorldClock from "./WorldClock.svelte";
   import AddWorldClock from "./AddWorldClock.svelte";
 
-  let clockOnly = false;
-  let manualDarkMode = false;
   let date = new Date();
   let hours = getHours(date);
   let timeZones = [];
   let newTimeZone = "";
   let newTimeZoneID;
+  let clockOnly = false;
+  let manualDarkMode = (hours > 17 || hours < 6) ? true : false;
 
   $: totalTimeZones = timeZones.length;
   $: {
