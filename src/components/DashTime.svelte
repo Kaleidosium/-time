@@ -68,7 +68,7 @@
 
       <WorldClock bind:date bind:timeZones />
 
-      <hr style="margin-bottom: 0.5rem; margin-top: 2rem;" />
+      <hr style="margin-top: 2rem;" />
     {/if}
     <footer>
       <div class="footer-text">

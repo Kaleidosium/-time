@@ -124,6 +124,7 @@ hr {
   border: 0;
   border-top: 10px solid var(--primary);
   margin: 1em 0;
+  margin-bottom: 0.5rem;
   padding: 0;
 }
 
