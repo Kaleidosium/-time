@@ -17,7 +17,7 @@
     "@rollup/plugin-node-resolve": "^11.2.1",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-svelte3": "^3.1.2",
+    "eslint-plugin-svelte3": "^3.2.0",
     "prettier": "^2.3.2",
     "rollup": "^2.42.0",
     "rollup-plugin-css-only": "^3.1.0",
