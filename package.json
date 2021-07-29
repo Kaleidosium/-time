@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
-    "date-fns": "^2.22.1",
+    "date-fns": "^2.23.0",
     "date-fns-tz": "^1.1.6",
     "sirv-cli": "^1.0.12",
     "tzdata": "^1.0.25"
