@@ -28,7 +28,7 @@
     "svelte-fa": "^2.2.1"
   },
   "dependencies": {
-    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "date-fns": "^2.23.0",
     "date-fns-tz": "^1.1.6",
     "sirv-cli": "^1.0.12",
