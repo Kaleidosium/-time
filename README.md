@@ -4,4 +4,4 @@
 I made this as an excuse to learn Svelte.
 
 ## License
-MIT
+Unlicense
